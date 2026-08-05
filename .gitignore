@@ -1,0 +1,8 @@
+# Herdr runtime state
+session.json
+release-notes.json
+.plugins.lock
+
+# Runtime logs and sockets
+*.log
+*.sock
