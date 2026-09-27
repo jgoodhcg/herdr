@@ -132,6 +132,13 @@ next_agent = "prefix+down"
 # width = "80%"
 # height = "80%"
 
+# Custom command context: https://herdr.dev/docs/configuration/
+[[keys.command]]
+key = "prefix+shift+u"
+type = "shell"
+description = "Reset active tab name to its number"
+command = 'n=$("$HERDR_BIN_PATH" tab list --workspace "$HERDR_ACTIVE_WORKSPACE_ID" | jq -r --arg id "$HERDR_ACTIVE_TAB_ID" ".result.tabs | map(.tab_id) | index(\$id) + 1"); "$HERDR_BIN_PATH" tab rename "$HERDR_ACTIVE_TAB_ID" "$n"'
+
 # Legacy indexed shortcut config is still parsed for compatibility.
 # Prefer switch_tab, switch_workspace, and focus_agent for new configs.
 # [keys.indexed]
