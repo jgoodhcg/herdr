@@ -249,6 +249,7 @@ directory = "~/projects/herdr-worktrees"
 
 # Background notification popup delivery
 agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = true
 [ui.toast]
 # off = disable pop-up notifications
 # herdr = show in-app toasts
