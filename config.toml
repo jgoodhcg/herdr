@@ -278,6 +278,7 @@ show_agent_labels_on_pane_borders = true
 # [ui.sound.agents]
 # droid = "off"
 
+enabled = false
 [session]
 # Resume supported AI-agent panes into their native conversation sessions after
 # a Herdr server restart. Requires official integrations that report session refs.
