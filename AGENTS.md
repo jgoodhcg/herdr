@@ -38,5 +38,6 @@ Fill the template at commit time from the active session. Do not store concrete 
 ## Key Files
 
 - `config.toml` — durable Herdr preferences and keybindings.
+- `bin/herdr-sort-spaces` — space-sort script. Install a copy at `~/.local/bin/herdr-sort-spaces` for the `prefix+shift+s` binding.
 - `.gitignore` — generated Herdr files excluded from version control.
 - `AGENTS.md` — repository purpose, validation, and commit policy.

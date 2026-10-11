@@ -139,6 +139,13 @@ type = "shell"
 description = "Reset active tab name to its number"
 command = 'n=$("$HERDR_BIN_PATH" tab list --workspace "$HERDR_ACTIVE_WORKSPACE_ID" | jq -r --arg id "$HERDR_ACTIVE_TAB_ID" ".result.tabs | map(.tab_id) | index(\$id) + 1"); "$HERDR_BIN_PATH" tab rename "$HERDR_ACTIVE_TAB_ID" "$n"'
 
+# Sort spaces by label. Source: bin/herdr-sort-spaces, installed to ~/.local/bin.
+[[keys.command]]
+key = "prefix+shift+s"
+type = "shell"
+description = "Sort spaces alphabetically"
+command = '"$HOME/.local/bin/herdr-sort-spaces"'
+
 # Legacy indexed shortcut config is still parsed for compatibility.
 # Prefer switch_tab, switch_workspace, and focus_agent for new configs.
 # [keys.indexed]
